@@ -1,0 +1,30 @@
+# RAG System Configuration
+rag_system:
+  model_name: "all-MiniLM-L6-v2"  # Sentence-Transformers model
+  embedding_dim: 384
+  vector_db_path: "./data/chroma_db"
+  chunk_size: 400
+  chunk_overlap: 50
+
+# Knowledge Base
+knowledge_base:
+  path: "./data/knowledge_base"
+  file_types: [".txt", ".md"]
+
+# LLM Configuration
+llm:
+  provider: "openai"  # or "huggingface"
+  model: "gpt-3.5-turbo"
+  temperature: 0.7
+  max_tokens: 512
+
+# ROS2 Configuration
+ros2:
+  node_name: "rag_query_server"
+  service_name: "query_knowledge_base"
+  domain_id: 0
+
+# Logging
+logging:
+  level: "INFO"
+  log_file: "./logs/rag_system.log"
