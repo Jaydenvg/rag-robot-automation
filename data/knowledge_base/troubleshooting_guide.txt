@@ -1,0 +1,181 @@
+TROUBLESHOOTING GUIDE FOR ROBOTIC AUTOMATION SYSTEMS
+
+1. COMMON SENSOR FAILURES AND SOLUTIONS
+
+1.1 Lidar Sensor Not Working
+Symptom: Lidar returns no readings or all zero values
+Check 1: Verify lidar is powered on (check power LED)
+Check 2: Inspect lens for dirt or dust, clean with soft cloth
+Check 3: Verify lidar cable is properly connected
+Check 4: Test lidar with manufacturer diagnostic software
+Solution: If still not working, replace lidar sensor module
+
+1.2 Camera Vision System Failure
+Symptom: Black or distorted images from camera
+Check 1: Clean camera lens with lens paper
+Check 2: Check camera focus ring is set to correct distance
+Check 3: Verify adequate lighting in environment
+Check 4: Check image processing code for errors
+Solution: If image is still poor, recalibrate camera or replace
+
+1.3 Force Sensor Drift
+Symptom: Force readings change when no force is applied
+Check 1: Allow sensor 10 minutes warm-up time
+Check 2: Perform zero-force calibration procedure
+Check 3: Check for mechanical stress or misalignment
+Check 4: Verify sensor cable is not damaged
+Solution: If drift continues, sensor may need recalibration or replacement
+
+1.4 Battery Voltage Fluctuations
+Symptom: Battery voltage reading fluctuates wildly
+Check 1: Check battery terminals for corrosion
+Check 2: Clean corrosion with vinegar-soaked cloth
+Check 3: Verify battery connections are tight
+Check 4: Check power distribution board for loose connections
+Solution: If voltage still unstable, battery may be failing
+
+2. COMMUNICATION AND CONNECTIVITY ISSUES
+
+2.1 ROS Node Not Connecting
+Symptom: ROS nodes cannot find each other or communicate
+Check 1: Verify ROS_DOMAIN_ID is same on all machines
+Check 2: Check network connectivity between computers
+Check 3: Verify firewall is not blocking ROS ports
+Check 4: Restart ROS daemon with ros2 daemon stop/start
+Solution: If still not working, check ROS documentation for network setup
+
+2.2 Wireless Communication Dropouts
+Symptom: Robot loses wireless signal periodically
+Check 1: Check signal strength on robot wireless module
+Check 2: Move router closer to robot work area
+Check 3: Check for interference from other wireless devices
+Check 4: Reduce distance between wireless devices
+Solution: If signal still weak, upgrade router or add wifi repeater
+
+2.3 Serial Port Communication Failures
+Symptom: USB serial connection shows errors or no data
+Check 1: Check USB cable is properly connected
+Check 2: Verify correct COM port is configured
+Check 3: Check baud rate matches sensor settings
+Check 4: Restart serial communication driver
+Solution: If still failing, try different USB cable or port
+
+3. MOTOR AND ACTUATOR PROBLEMS
+
+3.1 Motor Not Responding to Commands
+Symptom: Motor does not move despite receiving commands
+Check 1: Check motor power supply is connected
+Check 2: Verify motor controller is powered on
+Check 3: Test motor with manufacturer test software
+Check 4: Check for motor thermal overload shutdown
+Solution: Allow motor to cool if thermally limited, or replace motor
+
+3.2 Motor Moving Slower Than Expected
+Symptom: Motor is operational but moving at reduced speed
+Check 1: Check battery voltage is above minimum
+Check 2: Verify motor load is within specifications
+Check 3: Check motor bearings for friction or stiffness
+Check 4: Measure actual current draw compared to specification
+Solution: If current is high, motor bearings may need lubrication
+
+3.3 Motor Jerking or Stuttering
+Symptom: Motor motion is not smooth, has stops and starts
+Check 1: Check commutation timing on motor controller
+Check 2: Verify power supply voltage is stable
+Check 3: Check encoder feedback is reading correctly
+Check 4: Look for loose mechanical connections
+Solution: Adjust controller parameters or replace motor
+
+3.4 Gripper Cannot Close
+Symptom: Gripper motor runs but gripper does not close
+Check 1: Check for mechanical obstruction blocking closure
+Check 2: Verify gripper finger connections are tight
+Check 3: Check motor coupling is correctly seated
+Check 4: Verify motor direction is correct
+Solution: Remove obstruction or realign mechanical linkages
+
+4. CONTROL SYSTEM PERFORMANCE ISSUES
+
+4.1 Robot Position Drifting
+Symptom: Robot position estimate diverges from actual position
+Check 1: Recalibrate wheel encoders if mobile robot
+Check 2: Verify sensor calibration is current
+Check 3: Check for wheel slippage on slippery surfaces
+Check 4: Verify lidar or visual localization is working
+Solution: Use sensor fusion to combine multiple position estimates
+
+4.2 Unstable or Oscillating Control
+Symptom: Robot shakes or oscillates instead of moving smoothly
+Check 1: Reduce proportional gain in PID controller
+Check 2: Increase derivative gain to dampen oscillations
+Check 3: Check for control loop rate is at least 100 Hz
+Check 4: Verify no delay in sensor feedback
+Solution: Retune controller parameters according to tuning guidelines
+
+4.3 Slow Convergence to Target
+Symptom: Robot reaches target but takes very long time
+Check 1: Increase proportional gain to speed up response
+Check 2: Verify integral gain is not too high
+Check 3: Check that path planning is optimal
+Check 4: Verify no obstacles are blocking direct path
+Solution: Retune controller or verify environment is clear
+
+4.4 Navigation Failure in Known Environment
+Symptom: Robot cannot reach destination despite having map
+Check 1: Verify map is up to date with current environment
+Check 2: Check for new obstacles not on map
+Check 3: Verify robot localization is working correctly
+Check 4: Check path planner for planning errors
+Solution: Update map or verify localization system
+
+5. POWER MANAGEMENT ISSUES
+
+5.1 Battery Drains Too Quickly
+Symptom: Battery runs out much faster than expected
+Check 1: Monitor power consumption with power meter
+Check 2: Check for parasitic current drain in standby
+Check 3: Verify motors are not stalled or overloaded
+Check 4: Check for leaking charge from battery
+Solution: Identify high-power component and optimize or replace
+
+5.2 Battery Will Not Charge
+Symptom: Battery does not charge when connected to charger
+Check 1: Verify charger is powered on
+Check 2: Check charging cable connections
+Check 3: Verify battery voltage is not below cutoff
+Check 4: Check charger output with multimeter
+Solution: Replace charger or battery if faulty
+
+5.3 Voltage Drop During High Power Demand
+Symptom: Voltage drops significantly when motors start
+Check 1: Verify power supply is rated for peak current
+Check 2: Check power cable gauge is adequate
+Check 3: Look for loose connections causing resistance
+Check 4: Check battery internal resistance is acceptable
+Solution: Upgrade power supply or improve connections
+
+6. SAFETY SYSTEM ISSUES
+
+6.1 E-Stop Button Not Working
+Symptom: E-stop button does not stop robot movement
+Check 1: Check E-stop button is properly connected
+Check 2: Test E-stop circuit with multimeter
+Check 3: Verify safety relay is functioning
+Check 4: Check if robot is in manual override mode
+Solution: Service E-stop button or replace if damaged
+
+6.2 Collision Avoidance Not Triggering
+Symptom: Robot does not stop when obstacle is detected
+Check 1: Verify lidar or proximity sensor is working
+Check 2: Check collision threshold distance setting
+Check 3: Verify safety controller is receiving sensor data
+Check 4: Check safety stop command is being sent
+Solution: Verify sensor hardware and safety software
+
+6.3 Safety Lights Not Activating
+Symptom: Robot status lights do not change during operation
+Check 1: Check light power connections
+Check 2: Verify correct light signals are being sent
+Check 3: Test light with direct power application
+Check 4: Check light driver circuit
+Solution: Replace light bulbs or repair light driver circuit

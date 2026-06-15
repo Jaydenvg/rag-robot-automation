@@ -1,0 +1,182 @@
+TASK SPECIFICATIONS AND PROCEDURES FOR ROBOTIC AUTOMATION
+
+1. PICK AND PLACE OPERATIONS
+
+1.1 Basic Pick and Place Procedure
+Identify target object location using vision or markers
+Move robot to approach position 0.5 meters away from object
+Reduce speed to 0.2 meters per second for final approach
+Close gripper with force of 10 Newtons
+Lift object with smooth acceleration not exceeding 0.2 g
+Move to placement location at safe speed
+Lower object gently with velocity less than 0.1 meters per second
+Release gripper by reducing force to 2 Newtons
+Verify object is placed correctly before departing
+
+1.2 Object Recognition for Picking
+Use color detection to identify objects of specific color
+For color picking, set hue tolerance to plus or minus 15 degrees
+Size detection for objects: measure bounding box dimensions
+Reject objects outside size range of minimum 5 centimeters to maximum 30 centimeters
+Verify object is reachable before attempting pick operation
+
+1.3 Placement Location Requirements
+Placement surface must be flat and level
+Surface must support at least 2 times the weight of placed object
+Placement location must be within robot workspace
+Clearance around placement location must be at least 0.3 meters
+Verify no obstacles exist at placement location before movement
+
+1.4 Gripper Control for Different Objects
+For soft objects: use grip force of 5 to 8 Newtons
+For hard objects: use grip force of 10 to 15 Newtons
+For delicate objects: use grip force of 3 to 5 Newtons
+Increase grip force gradually over 0.5 seconds to avoid sudden jerks
+
+1.5 Error Handling During Pick
+If object cannot be gripped, increase grip force and retry once
+If object is dropped during movement, return to start and retry
+If placement fails, return object to original location and report failure
+If gripper malfunction detected, stop all operations and alert operator
+
+2. NAVIGATION TASKS FOR MOBILE ROBOTS
+
+2.1 Point-to-Point Navigation Procedure
+Receive target location coordinates in global reference frame
+Plan collision-free path from current position to target
+Execute path following with continuous obstacle detection
+Monitor position error and correct trajectory if needed
+Reduce speed as robot approaches target location
+Stop when distance to target is less than 0.1 meters
+Verify arrival at target within 0.2 meter tolerance
+
+2.2 Following Predetermined Routes
+Load predefined route with sequence of waypoints
+Verify all waypoints are within known environment
+Travel to each waypoint in sequence at standard speed
+Allow 1 second pause at each waypoint for stabilization
+Skip waypoint if blocked and replan remaining path
+Report completion when all waypoints are visited
+
+2.3 Return to Charging Station
+Maintain knowledge of charging station location
+Plan path from any location back to charging station
+Use charging station beacon if available for final homing
+Approach charging station slowly with reduced speed
+Align charging contacts carefully before docking
+Verify successful dock connection before leaving operation
+
+2.4 Mapping Unknown Environments
+Use lidar or vision to scan environment as robot moves
+Build occupancy grid of obstacles encountered
+Mark areas as explored to avoid duplicate mapping
+Gradually expand mapped area in expanding circles
+Detect and mark boundaries of environment
+Save completed map for future navigation
+
+3. OBSTACLE AVOIDANCE PROCEDURES
+
+3.1 Real-Time Obstacle Detection
+Continuously scan environment with lidar at 10 Hz minimum
+Any obstacle within 2 meters triggers avoidance protocol
+Smaller obstacles require closer proximity threshold
+Verify obstacle detection with multiple sensor readings
+
+3.2 Avoidance Strategies
+If obstacle detected ahead, reduce speed immediately
+Plan path around obstacle using local obstacle avoidance
+If avoidance path not possible, stop and wait
+If obstacle persists for more than 5 seconds, alert operator
+Resume original path once obstacle is cleared
+
+3.3 Static vs Dynamic Obstacles
+Static obstacles require path replanning
+Dynamic obstacles require speed adjustment and temporary halting
+People detected by vision system require immediate stop
+Small dynamic obstacles can be passed with reduced speed after waiting
+
+3.4 Obstacle Memory
+Remember locations of static obstacles for future navigation
+Update map with newly discovered static obstacles
+Forget dynamic obstacles after they move away
+Use map data to improve navigation planning
+
+4. GRIPPER CONTROL SPECIFICATIONS
+
+4.1 Gripper Basic Operations
+Open gripper: fully extend fingers to release object
+Close gripper: gradually increase grip force until resistance detected
+Adjust grip: fine-tune grip force based on object feedback
+Emergency release: open gripper fully regardless of state
+
+4.2 Grip Force Control
+Grip force is measured in Newtons using force sensors
+Monitor grip force continuously during holding
+Increase grip force if object starts slipping
+Do not exceed maximum grip force of 20 Newtons
+Grip force response time must be less than 0.5 seconds
+
+4.3 Gripper Speed Control
+Opening speed: maximum 0.5 meters per second
+Closing speed: maximum 0.3 meters per second
+Speed should be controlled to prevent sudden jerks
+Acceleration/deceleration: maximum 0.2 g
+
+4.4 Gripper Failure Detection
+Loss of grip force indicates object has been dropped
+Uneven force between fingers indicates misaligned grip
+If force exceeds maximum for more than 1 second, report error
+Gripper position sensors must match commanded position
+
+5. MULTI-ROBOT COORDINATION GUIDELINES
+
+5.1 Communication Protocol
+Use ROS topics for real-time communication between robots
+Publish position and velocity of each robot at 10 Hz
+Monitor other robot positions for collision avoidance
+Use reserved communication channels for safety-critical messages
+
+5.2 Collision Avoidance Between Robots
+Maintain minimum separation of 1 meter between robots
+Use velocity trajectory prediction for future collision detection
+If collision is predicted, lowest priority robot yields
+Robots must communicate intent before simultaneous operations
+
+5.3 Task Sequencing for Multiple Robots
+Assign tasks based on robot availability and capability
+Prevent multiple robots from accessing same workstation
+Use queuing system for shared resources
+Report task completion for load balancing
+
+5.4 Synchronized Operations
+Some tasks require simultaneous action of multiple robots
+Synchronization requires communication between robots
+Use heartbeat messages to confirm robot is still present
+If one robot fails, other robots must safely stop synchronized tasks
+
+6. TASK EXECUTION SEQUENCES
+
+6.1 Assembly Task Sequence
+Robot 1: Fetch component A from part bin and place at assembly station
+Robot 2: Fetch component B and place at assembly station
+Robot 1: Fasten component A with screwdriver gripper
+Robot 2: Fasten component B while Robot 1 is working
+Verify assembly is complete with vision inspection
+Transfer assembled unit to next workstation
+
+6.2 Inspection Task Sequence
+Robot navigates to inspection location
+Position vision camera for clear view of object
+Capture image or scan with appropriate sensor
+Process sensor data to detect defects
+Classify object as pass or fail based on criteria
+Move object to appropriate output bin
+
+6.3 Material Handling Task Sequence
+Identify stack of materials to be moved
+Calculate optimal path considering payload weight
+Move to source location
+Pick up load according to safe load procedures
+Transport to destination following navigation procedures
+Place load safely at destination
+Return to home position

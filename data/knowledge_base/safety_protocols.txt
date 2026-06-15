@@ -1,0 +1,86 @@
+SAFETY PROTOCOLS AND GUIDELINES FOR ROBOTICS AUTOMATION
+
+1. ROBOT SAFETY REQUIREMENTS
+
+1.1 Emergency Stop (E-Stop) Procedures
+An emergency stop button must be accessible at all times during robot operation. The E-stop button should halt all motion immediately within 100 milliseconds. The E-stop must be a physical button, not software-based. After triggering E-stop, the robot must remain in a safe state until manually reset. All personnel must know the location and operation of the E-stop button before working near robots.
+
+1.2 Safe Robot Operating Speeds
+Robots operating near humans must move at reduced speeds. Maximum speed when humans are in the workspace is 0.5 meters per second. Speed must be continuously monitored by the control system. Any sudden acceleration beyond 0.2 g is considered unsafe and must trigger protective actions. Speed limits must be enforced at the software level with hardware backups.
+
+1.3 Workspace Boundaries
+Define clear physical boundaries around the robot workspace using safety tape and signs. All obstacles and barriers must be clearly marked. The workspace must be large enough to allow safe emergency stops without collisions. No humans should enter the workspace without disabling the robot or confirming its safe state.
+
+1.4 Personal Protective Equipment (PPE)
+All personnel near robots must wear appropriate PPE including safety glasses and closed-toe shoes. Hard hats are required when there is risk of overhead hazards. Loose clothing, jewelry, and long hair must be secured as they can get caught in moving parts. PPE must be checked before entering the workspace.
+
+2. SENSOR VALIDATION PROTOCOLS
+
+2.1 Lidar Safety Confirmation
+Lidar sensors must detect obstacles continuously at 10 Hz minimum. If any obstacle is detected within 1 meter of the robot, motion must be halted. Lidar data must be validated before use in safety-critical decisions. Lidar performance degrades in bright sunlight and reflective surfaces require special handling. Lidar sensors must be calibrated monthly.
+
+2.2 Force/Torque Sensor Monitoring
+Force and torque sensors monitor the physical interaction of robots with their environment. Any force exceeding 50 Newtons must trigger a safety stop. Torque limits are 5 Newton-meters for robotic arms. Sensor drift must be checked daily through zero-force calibration. Force sensors must be replaced if values exceed 100 Newtons without physical contact.
+
+2.3 Temperature Monitoring
+Robot motors must not exceed 80 degrees Celsius during operation. If temperature reaches 75 degrees Celsius, reduce motor current and increase cooling. Temperature sensors must be checked every 30 minutes during continuous operation. If temperature reaches 85 degrees Celsius, immediately stop the robot and allow cooling for at least 15 minutes.
+
+2.4 Battery Level Monitoring
+Battery voltage must never drop below the minimum safe operating level. Monitor battery voltage continuously and alert operators when it reaches 20 percent. Return robot to charging station when battery reaches 15 percent. Never attempt to operate robot with battery below 10 percent as sensors may fail.
+
+3. COLLISION AVOIDANCE GUIDELINES
+
+3.1 Proximity Sensing
+Robots must use proximity sensors to detect approaching obstacles. Detection range must be at least 2 meters for robots moving faster than 0.5 meters per second. Proximity sensors must be checked for debris or damage before each shift. False positives must be investigated and filtered appropriately.
+
+3.2 Path Planning Safety
+All planned paths must be collision-free before execution. Path planning must account for robot size and safety margins. A safety margin of 0.5 meters must be maintained between robot and any obstacle. Dynamic obstacles must be replanned in real-time if they enter the planned path.
+
+3.3 Velocity Scaling Based on Proximity
+When obstacles are detected at 2 meters distance, reduce speed to 75 percent. At 1.5 meters, reduce speed to 50 percent. At 1 meter, reduce speed to 25 percent. If obstacle distance becomes less than 0.5 meters, execute immediate stop.
+
+4. SAFE OPERATION LIMITS
+
+4.1 Movement Constraints
+Maximum linear velocity: 1.0 meter per second
+Maximum angular velocity: 45 degrees per second
+Maximum acceleration: 0.3 g
+Maximum deceleration: 0.5 g
+Maximum joint angle: according to robot specifications
+
+4.2 Operating Environment Constraints
+Operating temperature range: 5 to 40 degrees Celsius
+Operating humidity: 20 to 80 percent non-condensing
+Robot must not operate in explosive atmospheres
+Robot must not be exposed to water or high moisture
+Ambient light should not exceed 10,000 lux for vision systems
+
+4.3 Load Constraints
+Maximum payload for robotic arm: 5 kilograms
+Maximum load on mobile base: 20 kilograms total weight
+Center of gravity must be within 10 centimeters of robot center
+No sudden load changes allowed, loading must be gradual
+
+5. MAINTENANCE SAFETY PROCEDURES
+
+5.1 Pre-Operation Checks
+Check robot for visible damage or wear before operation
+Verify all joints move freely and smoothly
+Test E-stop button functionality
+Verify battery is fully charged
+Check sensors for debris and clean if necessary
+
+5.2 Maintenance Mode Operations
+Only qualified technicians can perform maintenance
+Robot must be in maintenance mode to disable automatic safety checks
+Maintenance mode must be explicitly enabled with a physical key
+Display clear warning that robot is in maintenance mode
+Ensure E-stop is fully functional even in maintenance mode
+
+5.3 Component Replacement Procedures
+Power down robot and confirm it cannot be powered on during replacement
+Allow components to cool before touching if they were recently powered
+Use appropriate tools to avoid damaging components
+Test component functionality immediately after replacement
+Document component replacement in maintenance log
+

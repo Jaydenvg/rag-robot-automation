@@ -1,0 +1,146 @@
+CONTROL SYSTEM PARAMETERS AND SPECIFICATIONS FOR ROBOTICS
+
+1. PID CONTROLLER SETTINGS FOR MOBILE ROBOTS
+
+1.1 Position Control PID Parameters
+For controlling x-y position of mobile robots:
+Proportional Gain (Kp): 0.5
+Integral Gain (Ki): 0.05
+Derivative Gain (Kd): 0.1
+These values work well for smooth position transitions without oscillation.
+
+1.2 Orientation Control PID Parameters
+For controlling robot heading (yaw angle):
+Proportional Gain (Kp): 0.3
+Integral Gain (Ki): 0.02
+Derivative Gain (Kd): 0.08
+Lower gains prevent excessive rotation and overshoot.
+
+1.3 Velocity Control PID Parameters
+For maintaining constant velocity during movement:
+Proportional Gain (Kp): 1.0
+Integral Gain (Ki): 0.1
+Derivative Gain (Kd): 0.2
+These values maintain steady velocity despite terrain variations.
+
+1.4 Altitude Control for Flying Robots
+Proportional Gain (Kp): 0.8
+Integral Gain (Ki): 0.15
+Derivative Gain (Kd): 0.25
+Derivative term is critical to prevent oscillation in altitude.
+
+2. VELOCITY AND ACCELERATION LIMITS
+
+2.1 Mobile Robot Velocity Limits
+Maximum forward velocity: 1.0 meter per second
+Maximum backward velocity: 0.5 meter per second
+Maximum rotational velocity: 90 degrees per second
+Recommended cruise velocity: 0.6 meter per second
+
+2.2 Mobile Robot Acceleration Limits
+Maximum linear acceleration: 0.3 g (approximately 3 meters per second squared)
+Maximum angular acceleration: 180 degrees per second squared
+Recommended acceleration ramp: 0.1 meters per second squared
+Deceleration should be smooth, maximum 0.5 g to avoid tipping
+
+2.3 Robotic Arm Velocity Limits
+Maximum end-effector velocity: 0.5 meters per second
+Maximum joint velocity depends on joint type and load
+Wrist joint velocity: 180 degrees per second
+Shoulder joint velocity: 90 degrees per second
+
+2.4 Velocity Scaling Factors
+When battery is below 30 percent, reduce velocity to 70 percent
+When temperature exceeds 70 degrees Celsius, reduce velocity to 80 percent
+When heavy load is detected, reduce velocity to 60 percent
+When vision system detects obstacles, reduce velocity based on distance
+
+3. POSITION CONTROL SPECIFICATIONS
+
+3.1 Positional Accuracy Requirements
+Planar position accuracy should be within 5 centimeters
+Orientation accuracy should be within 5 degrees
+Vertical position accuracy for flying robots: 10 centimeters
+Repeatability should be within 3 centimeters for the same command
+
+3.2 Position Update Frequency
+Control loop frequency: 100 Hz (0.01 second update rate)
+Sensor reading frequency: 50 Hz minimum
+Position estimation: must incorporate all available sensors
+Position correction: apply continuously without jerky movements
+
+3.3 Target Position Approach Method
+Use smooth trajectory generation to reach target positions
+Start with slow velocity and increase gradually
+Near target, reduce velocity smoothly to avoid overshoot
+Final approach velocity should be less than 0.1 meter per second
+
+3.4 Multi-Point Path Following
+Robot should follow a sequence of waypoints in order
+Travel time between waypoints should be optimized for energy efficiency
+Path curvature should be smooth without sharp angles
+At each waypoint, verify position before proceeding to next
+
+4. ERROR TOLERANCE THRESHOLDS
+
+4.1 Position Error Tolerance
+Maximum allowed position error during movement: 0.3 meters
+Maximum allowed position error at goal: 0.1 meters
+If position error exceeds 0.5 meters, stop and replan path
+Position error must be monitored continuously
+
+4.2 Velocity Error Tolerance
+Commanded velocity: 0.5 meters per second
+Acceptable velocity error: plus or minus 0.1 meters per second
+If velocity error exceeds plus or minus 0.2 meters per second, adjust motor power
+Velocity must stabilize within 2 seconds of command
+
+4.3 Sensor Reading Error Tolerance
+Sensor noise must be filtered before use in control
+Outlier readings should be detected and rejected
+Kalman filter is recommended for combining multiple sensor readings
+Any reading that differs from prediction by more than 3 sigma should be flagged
+
+4.4 Timing Error Tolerance
+Control commands must execute within 50 milliseconds of request
+Sensor readings must be no older than 100 milliseconds
+Path updates must occur within 200 milliseconds
+Safety-critical commands must execute within 10 milliseconds
+
+5. TUNING GUIDELINES FOR CONTROL PARAMETERS
+
+5.1 Tuning Procedure
+Start with Kp at 0.1 and increase until system oscillates
+Then reduce Kp to half of that value
+Add Ki starting from 0.01 and increase until steady-state error disappears
+Add Kd starting from 0 and increase to reduce oscillation
+
+5.2 Avoiding Common Tuning Problems
+Oscillation usually means gains are too high, reduce by 20 percent
+Slow response usually means gains are too low, increase by 20 percent
+Overshoot means derivative gain is too low or proportional too high
+Sluggish movement usually indicates integral gain needs increase
+
+5.3 Testing Tuned Parameters
+Test with light load first, then increase load gradually
+Test on flat terrain first, then uneven terrain
+Test forward motion first, then backward and rotation
+Verify stability over temperature range of operation
+
+6. SYSTEM RESPONSE PARAMETERS
+
+6.1 Rise Time Specifications
+Rise time from 0 to 90 percent of target should be less than 2 seconds
+For critical control loops, rise time must be less than 0.5 seconds
+Settling time to within 5 percent should be less than 3 seconds
+
+6.2 Steady-State Error
+Steady-state error must be less than 1 percent for position control
+Steady-state error for velocity control must be zero with integral term
+Steady-state error measurement must be taken after system has settled
+
+6.3 Stability Margins
+Gain margin must be at least 6 decibels
+Phase margin must be at least 45 degrees
+System must be stable over entire operating range
+Stability must be verified under worst-case conditions
