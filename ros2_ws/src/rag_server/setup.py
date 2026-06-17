@@ -7,6 +7,7 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages', ['resource/rag_server']),
         ('share/rag_server', ['package.xml']),
+        ('share/rag_server/launch', ['launch/rag_server.launch.py', 'launch/complete_system.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
