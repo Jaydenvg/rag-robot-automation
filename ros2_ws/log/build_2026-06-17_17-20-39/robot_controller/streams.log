@@ -1,0 +1,21 @@
+[1.183s] Invoking command in '/home/jayden/rag_robot_automation/ros2_ws/src/robot_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data
+[1.423s] running egg_info
+[1.442s] writing ../../build/robot_controller/robot_controller.egg-info/PKG-INFO
+[1.442s] writing dependency_links to ../../build/robot_controller/robot_controller.egg-info/dependency_links.txt
+[1.442s] writing entry points to ../../build/robot_controller/robot_controller.egg-info/entry_points.txt
+[1.442s] writing requirements to ../../build/robot_controller/robot_controller.egg-info/requires.txt
+[1.442s] writing top-level names to ../../build/robot_controller/robot_controller.egg-info/top_level.txt
+[1.480s] reading manifest file '../../build/robot_controller/robot_controller.egg-info/SOURCES.txt'
+[1.480s] writing manifest file '../../build/robot_controller/robot_controller.egg-info/SOURCES.txt'
+[1.481s] running build
+[1.481s] running build_py
+[1.481s] running install
+[1.487s] running install_lib
+[1.506s] running install_data
+[1.506s] running install_egg_info
+[1.526s] removing '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages/robot_controller-0.0.1-py3.12.egg-info' (and everything under it)
+[1.526s] Copying ../../build/robot_controller/robot_controller.egg-info to /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages/robot_controller-0.0.1-py3.12.egg-info
+[1.527s] running install_scripts
+[1.649s] Installing robot_controller script to /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/robot_controller
+[1.649s] writing list of installed files to '/home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/install.log'
+[1.689s] Invoked command in '/home/jayden/rag_robot_automation/ros2_ws/src/robot_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data

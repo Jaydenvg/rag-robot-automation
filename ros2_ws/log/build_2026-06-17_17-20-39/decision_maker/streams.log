@@ -1,0 +1,37 @@
+[1.164s] Invoking command in '/home/jayden/rag_robot_automation/ros2_ws/src/decision_maker': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/decision_maker build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/install.log --single-version-externally-managed install_data
+[1.411s] running egg_info
+[1.411s] creating ../../build/decision_maker/decision_maker.egg-info
+[1.430s] writing ../../build/decision_maker/decision_maker.egg-info/PKG-INFO
+[1.430s] writing dependency_links to ../../build/decision_maker/decision_maker.egg-info/dependency_links.txt
+[1.430s] writing entry points to ../../build/decision_maker/decision_maker.egg-info/entry_points.txt
+[1.430s] writing requirements to ../../build/decision_maker/decision_maker.egg-info/requires.txt
+[1.430s] writing top-level names to ../../build/decision_maker/decision_maker.egg-info/top_level.txt
+[1.430s] writing manifest file '../../build/decision_maker/decision_maker.egg-info/SOURCES.txt'
+[1.468s] reading manifest file '../../build/decision_maker/decision_maker.egg-info/SOURCES.txt'
+[1.468s] writing manifest file '../../build/decision_maker/decision_maker.egg-info/SOURCES.txt'
+[1.468s] running build
+[1.469s] running build_py
+[1.469s] creating /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build
+[1.469s] creating /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build/lib
+[1.469s] creating /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build/lib/decision_maker
+[1.469s] copying decision_maker/__init__.py -> /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build/lib/decision_maker
+[1.469s] copying decision_maker/decision_maker_node.py -> /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build/lib/decision_maker
+[1.469s] running install
+[1.475s] running install_lib
+[1.494s] creating /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages/decision_maker
+[1.494s] copying /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build/lib/decision_maker/__init__.py -> /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages/decision_maker
+[1.494s] copying /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build/lib/decision_maker/decision_maker_node.py -> /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages/decision_maker
+[1.495s] byte-compiling /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages/decision_maker/__init__.py to __init__.cpython-312.pyc
+[1.495s] byte-compiling /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages/decision_maker/decision_maker_node.py to decision_maker_node.cpython-312.pyc
+[1.496s] running install_data
+[1.497s] creating /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/ament_index
+[1.497s] creating /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/ament_index/resource_index
+[1.497s] creating /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/ament_index/resource_index/packages
+[1.497s] copying resource/decision_maker -> /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/ament_index/resource_index/packages
+[1.497s] copying package.xml -> /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker
+[1.497s] running install_egg_info
+[1.517s] Copying ../../build/decision_maker/decision_maker.egg-info to /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages/decision_maker-0.0.1-py3.12.egg-info
+[1.517s] running install_scripts
+[1.641s] Installing decision_maker script to /home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/decision_maker
+[1.642s] writing list of installed files to '/home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/install.log'
+[1.684s] Invoked command in '/home/jayden/rag_robot_automation/ros2_ws/src/decision_maker' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/decision_maker build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/install.log --single-version-externally-managed install_data
