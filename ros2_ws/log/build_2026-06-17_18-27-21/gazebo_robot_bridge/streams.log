@@ -1,0 +1,37 @@
+[1.439s] Invoking command in '/home/jayden/rag_robot_automation/ros2_ws/src/gazebo_robot_bridge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gazebo_robot_bridge build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/install.log --single-version-externally-managed install_data
+[1.694s] running egg_info
+[1.694s] creating ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info
+[1.714s] writing ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/PKG-INFO
+[1.714s] writing dependency_links to ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/dependency_links.txt
+[1.714s] writing entry points to ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/entry_points.txt
+[1.714s] writing requirements to ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/requires.txt
+[1.714s] writing top-level names to ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/top_level.txt
+[1.715s] writing manifest file '../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/SOURCES.txt'
+[1.754s] reading manifest file '../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/SOURCES.txt'
+[1.755s] writing manifest file '../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/SOURCES.txt'
+[1.755s] running build
+[1.755s] running build_py
+[1.755s] creating /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build
+[1.755s] creating /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib
+[1.756s] creating /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib/gazebo_robot_bridge
+[1.756s] copying gazebo_robot_bridge/__init__.py -> /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib/gazebo_robot_bridge
+[1.756s] copying gazebo_robot_bridge/gazebo_bridge_node.py -> /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib/gazebo_robot_bridge
+[1.756s] running install
+[1.762s] running install_lib
+[1.781s] creating /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge
+[1.782s] copying /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib/gazebo_robot_bridge/__init__.py -> /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge
+[1.782s] copying /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib/gazebo_robot_bridge/gazebo_bridge_node.py -> /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge
+[1.782s] byte-compiling /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge/__init__.py to __init__.cpython-312.pyc
+[1.782s] byte-compiling /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge/gazebo_bridge_node.py to gazebo_bridge_node.cpython-312.pyc
+[1.783s] running install_data
+[1.783s] creating /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/share/ament_index
+[1.784s] creating /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/share/ament_index/resource_index
+[1.784s] creating /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/share/ament_index/resource_index/packages
+[1.784s] copying resource/gazebo_robot_bridge -> /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/share/ament_index/resource_index/packages
+[1.784s] copying package.xml -> /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/share/gazebo_robot_bridge
+[1.784s] running install_egg_info
+[1.804s] Copying ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info to /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge-0.0.1-py3.12.egg-info
+[1.805s] running install_scripts
+[1.935s] Installing gazebo_bridge script to /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/gazebo_robot_bridge
+[1.935s] writing list of installed files to '/home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/install.log'
+[1.977s] Invoked command in '/home/jayden/rag_robot_automation/ros2_ws/src/gazebo_robot_bridge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gazebo_robot_bridge build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/install.log --single-version-externally-managed install_data

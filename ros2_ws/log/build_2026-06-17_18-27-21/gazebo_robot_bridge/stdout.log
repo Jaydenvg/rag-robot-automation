@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info
+writing ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/requires.txt
+writing top-level names to ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/top_level.txt
+writing manifest file '../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/SOURCES.txt'
+reading manifest file '../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/SOURCES.txt'
+writing manifest file '../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build
+creating /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib
+creating /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib/gazebo_robot_bridge
+copying gazebo_robot_bridge/__init__.py -> /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib/gazebo_robot_bridge
+copying gazebo_robot_bridge/gazebo_bridge_node.py -> /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib/gazebo_robot_bridge
+running install
+running install_lib
+creating /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge
+copying /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib/gazebo_robot_bridge/__init__.py -> /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge
+copying /home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/build/lib/gazebo_robot_bridge/gazebo_bridge_node.py -> /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge
+byte-compiling /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge/gazebo_bridge_node.py to gazebo_bridge_node.cpython-312.pyc
+running install_data
+creating /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/share/ament_index
+creating /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/share/ament_index/resource_index
+creating /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/share/ament_index/resource_index/packages
+copying resource/gazebo_robot_bridge -> /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/share/gazebo_robot_bridge
+running install_egg_info
+Copying ../../build/gazebo_robot_bridge/gazebo_robot_bridge.egg-info to /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/python3.12/site-packages/gazebo_robot_bridge-0.0.1-py3.12.egg-info
+running install_scripts
+Installing gazebo_bridge script to /home/jayden/rag_robot_automation/ros2_ws/install/gazebo_robot_bridge/lib/gazebo_robot_bridge
+writing list of installed files to '/home/jayden/rag_robot_automation/ros2_ws/build/gazebo_robot_bridge/install.log'

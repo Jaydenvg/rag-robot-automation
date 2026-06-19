@@ -1,0 +1,37 @@
+[1.200s] Invoking command in '/home/jayden/rag_robot_automation/ros2_ws/src/robot_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data
+[1.452s] running egg_info
+[1.452s] creating ../../build/robot_controller/robot_controller.egg-info
+[1.471s] writing ../../build/robot_controller/robot_controller.egg-info/PKG-INFO
+[1.471s] writing dependency_links to ../../build/robot_controller/robot_controller.egg-info/dependency_links.txt
+[1.472s] writing entry points to ../../build/robot_controller/robot_controller.egg-info/entry_points.txt
+[1.472s] writing requirements to ../../build/robot_controller/robot_controller.egg-info/requires.txt
+[1.472s] writing top-level names to ../../build/robot_controller/robot_controller.egg-info/top_level.txt
+[1.472s] writing manifest file '../../build/robot_controller/robot_controller.egg-info/SOURCES.txt'
+[1.512s] reading manifest file '../../build/robot_controller/robot_controller.egg-info/SOURCES.txt'
+[1.512s] writing manifest file '../../build/robot_controller/robot_controller.egg-info/SOURCES.txt'
+[1.512s] running build
+[1.513s] running build_py
+[1.513s] creating /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build
+[1.513s] creating /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build/lib
+[1.513s] creating /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build/lib/robot_controller
+[1.513s] copying robot_controller/robot_controller_node.py -> /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build/lib/robot_controller
+[1.513s] copying robot_controller/__init__.py -> /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build/lib/robot_controller
+[1.513s] running install
+[1.519s] running install_lib
+[1.539s] creating /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages/robot_controller
+[1.539s] copying /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build/lib/robot_controller/robot_controller_node.py -> /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages/robot_controller
+[1.539s] copying /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build/lib/robot_controller/__init__.py -> /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages/robot_controller
+[1.540s] byte-compiling /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages/robot_controller/robot_controller_node.py to robot_controller_node.cpython-312.pyc
+[1.541s] byte-compiling /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages/robot_controller/__init__.py to __init__.cpython-312.pyc
+[1.541s] running install_data
+[1.541s] creating /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/ament_index
+[1.541s] creating /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/ament_index/resource_index
+[1.542s] creating /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/ament_index/resource_index/packages
+[1.542s] copying resource/robot_controller -> /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/ament_index/resource_index/packages
+[1.542s] copying package.xml -> /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller
+[1.542s] running install_egg_info
+[1.562s] Copying ../../build/robot_controller/robot_controller.egg-info to /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages/robot_controller-0.0.1-py3.12.egg-info
+[1.563s] running install_scripts
+[1.691s] Installing robot_controller script to /home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/robot_controller
+[1.692s] writing list of installed files to '/home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/install.log'
+[1.743s] Invoked command in '/home/jayden/rag_robot_automation/ros2_ws/src/robot_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data

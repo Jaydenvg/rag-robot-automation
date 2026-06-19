@@ -1,0 +1,230 @@
+[0.088s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.088s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x78a3d763a750>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x78a3d778f140>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x78a3d778f140>>)
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.121s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jayden/rag_robot_automation/ros2_ws'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_maker) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_maker) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_maker) by extension 'ignore_ament_install'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_maker) by extensions ['colcon_pkg']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_maker) by extension 'colcon_pkg'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_maker) by extensions ['colcon_meta']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_maker) by extension 'colcon_meta'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_maker) by extensions ['ros']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_maker) by extension 'ros'
+[0.148s] DEBUG:colcon.colcon_core.package_identification:Package 'src/decision_maker' with type 'ros.ament_python' and name 'decision_maker'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/rag_server) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/rag_server) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/rag_server) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/rag_server) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/rag_server) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/rag_server) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/rag_server) by extension 'colcon_meta'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/rag_server) by extensions ['ros']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/rag_server) by extension 'ros'
+[0.148s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rag_server' with type 'ros.ament_python' and name 'rag_server'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extension 'ignore_ament_install'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extension 'ros'
+[0.149s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_controller' with type 'ros.ament_python' and name 'robot_controller'
+[0.149s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.149s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.149s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.149s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.149s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.165s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.165s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.165s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/jayden/rag_robot_automation/ros2_ws/install
+[0.165s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/jayden/fyp_ws/install
+[0.168s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 482 installed packages in /opt/ros/jazzy
+[0.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'decision_maker' build argument 'cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'decision_maker' build argument 'cmake_target' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'decision_maker' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'decision_maker' build argument 'cmake_clean_cache' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'decision_maker' build argument 'cmake_clean_first' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'decision_maker' build argument 'cmake_force_configure' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'decision_maker' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'decision_maker' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'decision_maker' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.225s] DEBUG:colcon.colcon_core.verb:Building package 'decision_maker' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jayden/rag_robot_automation/ros2_ws/build/decision_maker', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker', 'merge_install': False, 'path': '/home/jayden/rag_robot_automation/ros2_ws/src/decision_maker', 'symlink_install': False, 'test_result_base': None}
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'rag_server' build argument 'cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'rag_server' build argument 'cmake_target' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'rag_server' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'rag_server' build argument 'cmake_clean_cache' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'rag_server' build argument 'cmake_clean_first' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'rag_server' build argument 'cmake_force_configure' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'rag_server' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'rag_server' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'rag_server' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.226s] DEBUG:colcon.colcon_core.verb:Building package 'rag_server' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jayden/rag_robot_automation/ros2_ws/build/rag_server', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server', 'merge_install': False, 'path': '/home/jayden/rag_robot_automation/ros2_ws/src/rag_server', 'symlink_install': False, 'test_result_base': None}
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_target' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.226s] DEBUG:colcon.colcon_core.verb:Building package 'robot_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jayden/rag_robot_automation/ros2_ws/build/robot_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller', 'merge_install': False, 'path': '/home/jayden/rag_robot_automation/ros2_ws/src/robot_controller', 'symlink_install': False, 'test_result_base': None}
+[0.226s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.227s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.227s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jayden/rag_robot_automation/ros2_ws/src/decision_maker' with build type 'ament_python'
+[0.227s] Level 1:colcon.colcon_core.shell:create_environment_hook('decision_maker', 'ament_prefix_path')
+[0.229s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/hook/ament_prefix_path.ps1'
+[0.230s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/hook/ament_prefix_path.dsv'
+[0.230s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/hook/ament_prefix_path.sh'
+[0.230s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.230s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.234s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jayden/rag_robot_automation/ros2_ws/src/rag_server' with build type 'ament_python'
+[0.235s] Level 1:colcon.colcon_core.shell:create_environment_hook('rag_server', 'ament_prefix_path')
+[0.235s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/hook/ament_prefix_path.ps1'
+[0.235s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/hook/ament_prefix_path.dsv'
+[0.236s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/hook/ament_prefix_path.sh'
+[0.236s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.236s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.240s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jayden/rag_robot_automation/ros2_ws/src/robot_controller' with build type 'ament_python'
+[0.240s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_controller', 'ament_prefix_path')
+[0.240s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/hook/ament_prefix_path.ps1'
+[0.241s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/hook/ament_prefix_path.dsv'
+[0.241s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/hook/ament_prefix_path.sh'
+[0.242s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.242s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.436s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jayden/rag_robot_automation/ros2_ws/src/decision_maker'
+[0.436s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.436s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.628s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jayden/rag_robot_automation/ros2_ws/src/rag_server'
+[0.628s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.628s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.834s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jayden/rag_robot_automation/ros2_ws/src/robot_controller'
+[0.834s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.834s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.404s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jayden/rag_robot_automation/ros2_ws/src/decision_maker': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/decision_maker build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/install.log --single-version-externally-managed install_data
+[1.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jayden/rag_robot_automation/ros2_ws/src/rag_server': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/rag_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rag_server build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/install.log --single-version-externally-managed install_data
+[1.441s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jayden/rag_robot_automation/ros2_ws/src/robot_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data
+[1.918s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jayden/rag_robot_automation/ros2_ws/src/decision_maker' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/decision_maker build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/decision_maker/install.log --single-version-externally-managed install_data
+[1.921s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker' for CMake module files
+[1.922s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker' for CMake config files
+[1.924s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib'
+[1.924s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/bin'
+[1.924s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/pkgconfig/decision_maker.pc'
+[1.925s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/lib/python3.12/site-packages'
+[1.925s] Level 1:colcon.colcon_core.shell:create_environment_hook('decision_maker', 'pythonpath')
+[1.925s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/hook/pythonpath.ps1'
+[1.926s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/hook/pythonpath.dsv'
+[1.927s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/hook/pythonpath.sh'
+[1.928s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/bin'
+[1.928s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(decision_maker)
+[1.928s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/package.ps1'
+[1.931s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/package.dsv'
+[1.932s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/package.sh'
+[1.934s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/package.bash'
+[1.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/decision_maker/package.zsh'
+[1.937s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker/share/colcon-core/packages/decision_maker)
+[1.976s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server' for CMake module files
+[1.977s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jayden/rag_robot_automation/ros2_ws/src/rag_server' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/rag_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rag_server build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/install.log --single-version-externally-managed install_data
+[1.978s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server' for CMake config files
+[1.978s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib'
+[1.978s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/bin'
+[1.978s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/pkgconfig/rag_server.pc'
+[1.979s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/python3.12/site-packages'
+[1.979s] Level 1:colcon.colcon_core.shell:create_environment_hook('rag_server', 'pythonpath')
+[1.979s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/hook/pythonpath.ps1'
+[1.979s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/hook/pythonpath.dsv'
+[1.979s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/hook/pythonpath.sh'
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/bin'
+[1.980s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rag_server)
+[1.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/package.ps1'
+[1.980s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/package.dsv'
+[1.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/package.sh'
+[1.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/package.bash'
+[1.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/package.zsh'
+[1.981s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/colcon-core/packages/rag_server)
+[1.982s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller' for CMake module files
+[1.984s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller' for CMake config files
+[1.984s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jayden/rag_robot_automation/ros2_ws/src/robot_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv_rag) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv_rag) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/build install --record /home/jayden/rag_robot_automation/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data
+[1.984s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib'
+[1.984s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/bin'
+[1.984s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/pkgconfig/robot_controller.pc'
+[1.985s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/lib/python3.12/site-packages'
+[1.985s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_controller', 'pythonpath')
+[1.985s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/hook/pythonpath.ps1'
+[1.985s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/hook/pythonpath.dsv'
+[1.985s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/hook/pythonpath.sh'
+[1.986s] Level 1:colcon.colcon_core.environment:checking '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/bin'
+[1.986s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_controller)
+[1.986s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/package.ps1'
+[1.986s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/package.dsv'
+[1.987s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/package.sh'
+[1.987s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/package.bash'
+[1.987s] INFO:colcon.colcon_core.shell:Creating package script '/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/robot_controller/package.zsh'
+[1.987s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jayden/rag_robot_automation/ros2_ws/install/robot_controller/share/colcon-core/packages/robot_controller)
+[1.988s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.988s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.988s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.988s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.997s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.997s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.998s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.024s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.024s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jayden/rag_robot_automation/ros2_ws/install/local_setup.ps1'
+[2.026s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jayden/rag_robot_automation/ros2_ws/install/_local_setup_util_ps1.py'
+[2.029s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jayden/rag_robot_automation/ros2_ws/install/setup.ps1'
+[2.031s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jayden/rag_robot_automation/ros2_ws/install/local_setup.sh'
+[2.032s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jayden/rag_robot_automation/ros2_ws/install/_local_setup_util_sh.py'
+[2.033s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jayden/rag_robot_automation/ros2_ws/install/setup.sh'
+[2.035s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jayden/rag_robot_automation/ros2_ws/install/local_setup.bash'
+[2.036s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jayden/rag_robot_automation/ros2_ws/install/setup.bash'
+[2.038s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jayden/rag_robot_automation/ros2_ws/install/local_setup.zsh'
+[2.039s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jayden/rag_robot_automation/ros2_ws/install/setup.zsh'

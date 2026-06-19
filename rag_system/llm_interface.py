@@ -1,139 +1,94 @@
-import os
+"""LLM Interface - Handles communication with Ollama"""
+
 import requests
-import json
-from typing import Optional
+from typing import Dict, List
+
 
 class OllamaInterface:
-    """Interface to Ollama for local LLM inference"""
+    """Interface for Ollama LLM"""
     
-    def __init__(self, model: str = "mistral", base_url: str = "http://localhost:11434"):
-        """Initialize Ollama client"""
+    def __init__(self, model: str = "mistral", host: str = "localhost", port: int = 11434):
+        """Initialize Ollama interface"""
         self.model = model
-        self.base_url = base_url
-        self.conversation_history = []
+        self.host = host
+        self.port = port
+        self.base_url = f"http://{host}:{port}"
         
         # Test connection
         try:
-            response = requests.get(f"{self.base_url}/api/tags")
+            response = requests.get(f"{self.base_url}/api/tags", timeout=5)
             if response.status_code == 200:
-                print(f"Ollama connected successfully")
-                print(f"Using model: {self.model}\n")
+                print("Ollama connected successfully")
+                print(f"Using model: {model}")
             else:
-                raise ConnectionError("Ollama server not responding")
+                raise Exception("Failed to connect to Ollama")
         except Exception as e:
-            raise ConnectionError(
-                f"Cannot connect to Ollama at {self.base_url}\n"
-                f"Make sure Ollama is running: ollama serve"
-            )
+            raise Exception(f"Cannot connect to Ollama at {self.base_url}: {e}")
     
-    def generate_response(self, user_query: str, context: str) -> str:
-        """Generate response based on query and retrieved context"""
+    def generate(self, prompt: str, context: str = "", max_tokens: int = 500) -> str:
+        """Generate response using Ollama"""
         
-        # Build the prompt with context
-        system_prompt = """You are an expert in robotics automation and control systems. 
-You have access to a comprehensive knowledge base about safety protocols, control parameters, 
-task specifications, troubleshooting, and best practices.
+        # Combine prompt and context
+        full_prompt = f"""Based on the following context, answer the question concisely:
 
-When answering questions:
-1. Use the provided context to give accurate, practical answers
-2. Be specific with numbers, parameters, and procedures
-3. Prioritize safety considerations
-4. If the context doesn't cover the question, say so clearly
-5. Provide actionable guidance"""
-        
-        user_message = f"""Context from knowledge base:
+Context:
 {context}
 
-User question: {user_query}
+Question: {prompt}
 
-Please provide a detailed answer based on the knowledge base context."""
+Answer:"""
         
         try:
-            print(f"Querying Ollama ({self.model})...")
-            
-            # Send request to Ollama
             response = requests.post(
                 f"{self.base_url}/api/generate",
                 json={
                     "model": self.model,
-                    "prompt": user_message,
-                    "system": system_prompt,
+                    "prompt": full_prompt,
                     "stream": False,
-                    "temperature": 0.7
+                    "num_predict": max_tokens
                 },
                 timeout=120
             )
             
-            if response.status_code != 200:
-                return f"Error from Ollama: {response.text}"
-            
-            result = response.json()
-            answer = result.get("response", "No response generated")
-            
-            # Track conversation
-            self.conversation_history.append({
-                "query": user_query,
-                "context_used": len(context.split()),
-                "response_length": len(answer.split())
-            })
-            
-            return answer
+            if response.status_code == 200:
+                result = response.json()
+                return result.get("response", "").strip()
+            else:
+                return f"Error: Ollama returned status {response.status_code}"
         
-        except requests.exceptions.ConnectionError:
-            return (
-                "Error: Cannot connect to Ollama. "
-                "Make sure Ollama is running with: ollama serve"
-            )
-        except Exception as e:
-            return f"Error generating response: {str(e)}"
+        except requests.exceptions.Timeout:
+            return "Error: Ollama request timed out"
+        except requests.exceptions.RequestException as e:
+            return f"Error: {str(e)}"
     
-    def get_conversation_stats(self) -> dict:
-        """Get statistics about conversation history"""
-        if not self.conversation_history:
-            return {"total_queries": 0}
+    def extract_command(self, response: str) -> Dict:
+        """Extract robot command from response"""
+        response_lower = response.lower()
         
-        total_context_words = sum(h["context_used"] for h in self.conversation_history)
-        total_response_words = sum(h["response_length"] for h in self.conversation_history)
-        
-        return {
-            "total_queries": len(self.conversation_history),
-            "total_context_words": total_context_words,
-            "total_response_words": total_response_words,
-            "avg_context_words": total_context_words / len(self.conversation_history),
-            "avg_response_words": total_response_words / len(self.conversation_history)
+        command = {
+            'action': 'idle',
+            'speed': 0.0,
+            'angular': 0.0
         }
-
-# For testing
-if __name__ == "__main__":
-    try:
-        llm = OllamaInterface()
         
-        # Test query
-        test_context = """
-        SAFETY PROTOCOLS:
-        Maximum speed when humans are in the workspace is 0.5 meters per second.
-        E-stop button should halt all motion immediately within 100 milliseconds.
-        All personnel must wear safety glasses and closed-toe shoes.
-        """
+        # Check for speed values
+        if any(word in response_lower for word in ['0.5', 'safe', 'maximum', 'normal']):
+            command['action'] = 'move'
+            command['speed'] = 0.5
+        elif any(word in response_lower for word in ['0.2', 'slow', 'caution', 'careful']):
+            command['action'] = 'move'
+            command['speed'] = 0.2
+        elif any(word in response_lower for word in ['1.0', 'fast', 'accelerate', 'quickly']):
+            command['action'] = 'move'
+            command['speed'] = 1.0
+        elif any(word in response_lower for word in ['stop', 'halt', 'emergency']):
+            command['action'] = 'stop'
+            command['speed'] = 0.0
         
-        test_query = "What safety precautions should I take when operating a robot near humans?"
+        # Check for rotation
+        if 'left' in response_lower:
+            command['angular'] = 0.5
+        elif 'right' in response_lower:
+            command['angular'] = -0.5
         
-        print(f"Test Query: {test_query}\n")
-        print(f"Context provided: {len(test_context.split())} words\n")
-        
-        response = llm.generate_response(test_query, test_context)
-        
-        print("Response from Ollama:")
-        print("-" * 50)
-        print(response)
-        print("-" * 50)
-        
-        stats = llm.get_conversation_stats()
-        if stats['total_queries'] > 0:
-            print(f"\nConversation Statistics:")
-            print(f"  Total queries: {stats['total_queries']}")
-            print(f"  Average context words: {stats['avg_context_words']:.1f}")
-            print(f"  Average response words: {stats['avg_response_words']:.1f}")
-        
-    except Exception as e:
-        print(f"Error: {e}")
+        return command

@@ -1,0 +1,15 @@
+[0.146s] WARNING:colcon.colcon_core.package_identification:Failed to parse ROS package manifest in 'src/robot_controller': Error(s) in package 'src/robot_controller/package.xml':
+Error(s):
+- The generic dependency on 'rclpy' is redundant with: build_depend, build_export_depend, exec_depend
+- The generic dependency on 'std_msgs' is redundant with: build_depend, build_export_depend, exec_depend
+- The generic dependency on 'geometry_msgs' is redundant with: build_depend, build_export_depend, exec_depend
+[0.356s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/jayden/rag_robot_automation/ros2_ws/install/rag_server' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.356s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/jayden/rag_robot_automation/ros2_ws/install/decision_maker' in the environment variable AMENT_PREFIX_PATH doesn't exist
+Starting >>> decision_maker
+Starting >>> rag_server
+Starting >>> robot_controller
+Finished <<< decision_maker [1.70s]
+Finished <<< rag_server [1.74s]
+Finished <<< robot_controller [1.74s]
+
+Summary: 3 packages finished [2.10s]

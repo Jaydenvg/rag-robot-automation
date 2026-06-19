@@ -1,0 +1,38 @@
+running egg_info
+creating ../../build/rag_server/rag_server.egg-info
+writing ../../build/rag_server/rag_server.egg-info/PKG-INFO
+writing dependency_links to ../../build/rag_server/rag_server.egg-info/dependency_links.txt
+writing entry points to ../../build/rag_server/rag_server.egg-info/entry_points.txt
+writing requirements to ../../build/rag_server/rag_server.egg-info/requires.txt
+writing top-level names to ../../build/rag_server/rag_server.egg-info/top_level.txt
+writing manifest file '../../build/rag_server/rag_server.egg-info/SOURCES.txt'
+reading manifest file '../../build/rag_server/rag_server.egg-info/SOURCES.txt'
+writing manifest file '../../build/rag_server/rag_server.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/build
+creating /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/build/lib
+creating /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/build/lib/rag_server
+copying rag_server/__init__.py -> /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/build/lib/rag_server
+copying rag_server/rag_server_node.py -> /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/build/lib/rag_server
+running install
+running install_lib
+creating /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/python3.12/site-packages/rag_server
+copying /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/build/lib/rag_server/__init__.py -> /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/python3.12/site-packages/rag_server
+copying /home/jayden/rag_robot_automation/ros2_ws/build/rag_server/build/lib/rag_server/rag_server_node.py -> /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/python3.12/site-packages/rag_server
+byte-compiling /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/python3.12/site-packages/rag_server/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/python3.12/site-packages/rag_server/rag_server_node.py to rag_server_node.cpython-312.pyc
+running install_data
+creating /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/ament_index
+creating /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/ament_index/resource_index
+creating /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/ament_index/resource_index/packages
+copying resource/rag_server -> /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/ament_index/resource_index/packages
+copying package.xml -> /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server
+creating /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/launch
+copying launch/rag_server.launch.py -> /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/launch
+copying launch/complete_system.launch.py -> /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/share/rag_server/launch
+running install_egg_info
+Copying ../../build/rag_server/rag_server.egg-info to /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/python3.12/site-packages/rag_server-0.0.1-py3.12.egg-info
+running install_scripts
+Installing rag_server script to /home/jayden/rag_robot_automation/ros2_ws/install/rag_server/lib/rag_server
+writing list of installed files to '/home/jayden/rag_robot_automation/ros2_ws/build/rag_server/install.log'
